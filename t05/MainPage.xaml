@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="t05.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="50,5,50,5"
+            Spacing="25">
+
+            <!-- Person -->
+            <Label
+                Text="Työntekijän tiedot"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                Text="Etunimi"
+                Style="{StaticResource SubHeadline}" />
+            <Entry
+                Placeholder="Syötä etunimi..."
+                x:Name="FirstName"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Sukunimi"
+                Style="{StaticResource SubHeadline}" />
+            <Entry
+                Placeholder="Syötä sukunimi"
+                x:Name="LastName"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Syntymäaika"
+                Style="{StaticResource SubHeadline}" />
+            <DatePicker
+                x:Name="DateOfBirth"
+                HorizontalOptions="Center" />
+
+            <!-- Employee -->
+            <Label
+                Text="Työ titteli"
+                Style="{StaticResource SubHeadline}" />
+            <Picker
+                x:Name="JobTitle"
+                HorizontalOptions="Center">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>projektityöntekijä</x:String>
+                        <x:String>suunnittelija</x:String>
+                        <x:String>asiantuntija</x:String>
+                        <x:String>johtaja</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label
+                Text="Työn aloituspäivä"
+                Style="{StaticResource SubHeadline}" />
+            <DatePicker
+                x:Name="JobStartDate"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Työn lopetuspäivä"
+                Style="{StaticResource SubHeadline}" />
+            <DatePicker
+                x:Name="JobEndDate"
+                HorizontalOptions="Center" />
+
+            <Button
+                Text="Tallenna"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

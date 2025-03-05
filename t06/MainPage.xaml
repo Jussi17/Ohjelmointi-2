@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="t06.MainPage"
+             Title="Tuplaus">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <ScrollView Grid.Row="0">
+            <VerticalStackLayout
+                Padding="30,0"
+                Spacing="25">
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <HorizontalStackLayout
+            Grid.Row="1"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Padding="30,0"
+            Spacing="10">
+            <Label
+                Text="Luku"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+
+            <Entry Placeholder="0"
+                   x:Name="EntryField"
+                   WidthRequest="300"
+                   HorizontalTextAlignment="End" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Tuplaa" 
+                SemanticProperties.Hint="Tuplaa"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Fill" />
+        </HorizontalStackLayout>
+
+        <ScrollView Grid.Row="2">
+            <VerticalStackLayout
+                Padding="30,0"
+                Spacing="25">
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>
