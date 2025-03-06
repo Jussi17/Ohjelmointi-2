@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="t07.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:t07"
+    Shell.FlyoutBehavior="Disabled"
+    Title="t07"
+    BackgroundColor="LightYellow">
+
+    <Shell.MenuBarItems>
+        <MenuBarItem Text="File"/>
+        <MenuBarItem Text="Edit"/>
+        <MenuBarItem Text="Help"/>
+    </Shell.MenuBarItems>
+    <TabBar>
+        <Tab Title="Tasks">
+            <ShellContent
+                ContentTemplate="{DataTemplate local:TasksPage}"
+                Route="TasksPage" />
+        </Tab>
+        <Tab Title="Notes">
+            <ShellContent
+                ContentTemplate="{DataTemplate local:NotesPage}"
+                Route="NotesPage" />
+        </Tab>
+    </TabBar>
+</Shell>
