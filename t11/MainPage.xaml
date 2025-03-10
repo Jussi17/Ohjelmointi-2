@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="t11.MainPage">
+    <Shell.TitleView>
+        <Grid BackgroundColor="#0000B7" Padding="10">
+            <Label Text="Kaksi lomaketta -sovellus" TextColor="White" VerticalOptions="Center" FontSize="28" />
+        </Grid>
+    </Shell.TitleView>
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Button
+                x:Name="EditorBtn"
+                Text="Avaa editori" 
+                Margin="0,30,0,0"
+                WidthRequest="200"
+                Clicked="EditorButtonClicked"
+                HorizontalOptions="Fill" />
+
+            <Label x:Name="NameLabel" Text="Nimi" VerticalOptions="Center" HorizontalOptions="Center" />
+            <Label x:Name="AddressLabel" Text="Osoite" VerticalOptions="Center" HorizontalOptions="Center" />
+            <Label x:Name="PhoneLabel" Text="Puhelin" VerticalOptions="Center" HorizontalOptions="Center" />
+            <Label x:Name="EmailLabel" Text="Sähköposti" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+            <Button
+                x:Name="CloseBtn"
+                Text="Sulje sovellus" 
+                WidthRequest="200"
+                Clicked="OnCloseButtonClicked"
+                HorizontalOptions="Fill" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
