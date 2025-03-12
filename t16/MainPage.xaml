@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="t16.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Grid ColumnDefinitions="Auto, Auto, Auto, Auto, Auto" 
+                  RowDefinitions="Auto" 
+                  Padding="0,20"
+                  ColumnSpacing="10"
+                  RowSpacing="15">
+
+                <Label Text="Pvm" FontSize="18" FontAttributes="Bold" Grid.Column="0"  />
+
+                <Entry x:Name="Paiva" Placeholder="Päivä" WidthRequest="100" Grid.Column="1"  />
+                <Entry x:Name="Kuukausi" Placeholder="Kuukausi" WidthRequest="100" Grid.Column="2" />
+                <Entry x:Name="Vuosi" Placeholder="Vuosi" WidthRequest="100" Grid.Column="3" />
+
+                <Button
+                    x:Name="CheckBtn"
+                    Text="Tarkista päivämäärä" 
+                    Grid.Column="4" 
+                    WidthRequest="200"
+                    Clicked="OnCheckDateClicked"
+                    HorizontalOptions="Fill" />
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

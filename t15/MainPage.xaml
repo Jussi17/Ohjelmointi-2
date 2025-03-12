@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="t15.MainPage"
+             Title="Poikkeusten käsittely">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,30"
+            Spacing="25"
+            VerticalOptions="Start">
+
+            <Grid ColumnDefinitions="Auto, *" 
+                  RowDefinitions="Auto, Auto" 
+                  Padding="0,30"
+                  ColumnSpacing="10"
+                  RowSpacing="15">
+
+                <Label Text="Syötä luku:" 
+                       Grid.Row="0" 
+                       Grid.Column="0" 
+                       VerticalOptions="Center" />
+
+                <Entry x:Name="Luku1Entry" 
+                       Unfocused="OnEntryUnfocused" 
+                       Placeholder="Syötä kokonaisluku"
+                       Keyboard="Numeric"
+                       WidthRequest="200" 
+                       Grid.Row="0" 
+                       Grid.Column="1" />
+
+                <Label Text="Syötä toinen luku:" 
+                       Grid.Row="1" 
+                       Grid.Column="0" 
+                       VerticalOptions="Center" />
+
+                <Entry x:Name="Luku2Entry" 
+                       Unfocused="OnEntryUnfocused" 
+                       Placeholder="Syötä kokonaisluku"
+                       Keyboard="Numeric"
+                       WidthRequest="200" 
+                       Grid.Row="1" 
+                       Grid.Column="1" />
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
