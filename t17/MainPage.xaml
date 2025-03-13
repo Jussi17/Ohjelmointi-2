@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="t17.MainPage">
+
+
+    <ContentPage.MenuBarItems>
+        <MenuBarItem Text="File">
+            <MenuFlyoutItem Text="Lue" Clicked="ReadFile" />
+            <MenuFlyoutItem Text="Tallenna" Clicked="SaveFile" />
+            <MenuFlyoutItem Text="Lopeta" Clicked="ExitApp" />
+        </MenuBarItem>
+    </ContentPage.MenuBarItems>
+    <VerticalStackLayout Padding="20,10" BackgroundColor="Black">
+        <Editor x:Name="Editori" BackgroundColor="Lavender" TextColor="Black" HeightRequest="450" Placeholder="Kirjoita tähän..." />
+    </VerticalStackLayout>
+    
+</ContentPage>

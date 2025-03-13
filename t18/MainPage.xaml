@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="t18.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ContentPage.MenuBarItems>
+        <MenuBarItem Text="File">
+            <MenuFlyoutItem Clicked="NewFile" Text="Uusi" />
+            <MenuFlyoutItem Clicked="OpenFile" Text="Avaa" />
+            <MenuFlyoutItem Clicked="SaveFile" Text="Tallenna" />
+            <MenuFlyoutItem Clicked="SaveNameFile" Text="Tallenna nimellä" />
+            <MenuFlyoutItem Clicked="ExitApp" Text="Lopeta" />
+        </MenuBarItem>
+    </ContentPage.MenuBarItems>
+
+    <VerticalStackLayout Padding="20,10" BackgroundColor="Black">
+        <Editor
+            x:Name="Editori"
+            BackgroundColor="Lavender"
+            HeightRequest="450"
+            Placeholder="Kirjoita tähän..."
+            TextColor="Black" />
+        <Label
+            x:Name="FilePathLabel"
+            Text="Ei tiedostoa valittuna"
+            TextColor="White" />
+    </VerticalStackLayout>
+
+</ContentPage>
