@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="t20.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:t20"
+    Title="t20"
+    Shell.FlyoutBehavior="Flyout">
+
+    <Shell.TitleView>
+        <Grid BackgroundColor="DarkGreen">
+            <Label
+                Padding="10,0"
+                FontAttributes="Bold"
+                FontSize="28"
+                Text="Pistesovellus"
+                TextColor="White"
+                VerticalOptions="Center" />
+        </Grid>
+    </Shell.TitleView>
+
+    <ShellContent
+        Title="Pistesovellus"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+</Shell>

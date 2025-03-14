@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="t20.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,10" Spacing="25">
+
+            <Button
+                Padding="10,10"
+                BackgroundColor="DarkGreen"
+                Clicked="OnOpenClicked"
+                HorizontalOptions="Fill"
+                Text="Avaa pisteet" />
+
+            <Grid
+                Padding="0,10"
+                ColumnDefinitions="Auto, Auto"
+                ColumnSpacing="10"
+                RowDefinitions="Auto,Auto,Auto"
+                RowSpacing="15">
+
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    FontSize="18"
+                    Text="Nimi" />
+                <Entry
+                    x:Name="NimiEntry"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    WidthRequest="150" />
+
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    FontSize="18"
+                    Text="Pisteet" />
+                <Entry
+                    x:Name="PisteetEntry"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    WidthRequest="150" />
+
+                <Button
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    BackgroundColor="DarkGreen"
+                    Clicked="OnAddClicked"
+                    HorizontalOptions="Fill"
+                    Text="Lisää ja tallenna"
+                    WidthRequest="150" />
+            </Grid>
+
+            <Border
+                x:Name="Border"
+                Padding="30,30,30,30"
+                HorizontalOptions="Fill"
+                IsVisible="False"
+                Stroke="DarkGreen"
+                StrokeShape="RoundRectangle 20,20,20,20"
+                StrokeThickness="3">
+
+                <ListView x:Name="PlayerListView">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid BackgroundColor="{Binding RowColor}" ColumnDefinitions="*,*">
+                                    <Label
+                                        Grid.Column="0"
+                                        Padding="10,10"
+                                        FontAttributes="Bold"
+                                        FontSize="Medium"
+                                        Text="{Binding Nimi}"
+                                        VerticalOptions="Center" />
+                                    <Label
+                                        Grid.Column="1"
+                                        FontSize="Medium"
+                                        Text="{Binding Pisteet}"
+                                        VerticalOptions="Center" />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
